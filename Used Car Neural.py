@@ -107,5 +107,6 @@ from sklearn.metrics import mean_absolute_percentage_error
 print("mean absolute percentage error is ==",mean_absolute_percentage_error(y_test,y_prediction)*100, "%")
 
 # r2 score
+#test 
 from sklearn.metrics import r2_score
 print("r2 score is ==",  r2_score(y_test,y_prediction))
