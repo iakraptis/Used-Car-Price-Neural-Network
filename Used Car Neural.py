@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import sklearn
+import pickle
 
 features = pd.read_csv("data\X_train.csv", sep=',')
 targets = pd.read_csv('data\y_train.csv', sep=',')
@@ -107,6 +108,9 @@ from sklearn.metrics import mean_absolute_percentage_error
 print("mean absolute percentage error is ==",mean_absolute_percentage_error(y_test,y_prediction)*100, "%")
 
 # r2 score
-#test 
 from sklearn.metrics import r2_score
 print("r2 score is ==",  r2_score(y_test,y_prediction))
+
+### SAVE MODEL ####
+filename = 'NEURAL.sav'
+pickle.dump(model, open(filename, 'wb'))
